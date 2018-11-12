@@ -4,12 +4,13 @@ import android.content.Context;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.zhouwenguang.mycardlayout.base.BaseCardView;
+import com.example.zhouwenguang.mycardlayout.R;
+import com.example.zhouwenguang.mycardlayout.base.BaseCard;
 
-public class NoticeCardView extends BaseCardView {
+public class NoticeCard extends BaseCard {
     @Override
-    public View getView(Context context, int layoutId) {
-        View view=setContentView(context,layoutId);
+    public View getView(Context context) {
+        View view=setContentView(context,R.layout.item_card1);
         return view;
     }
 

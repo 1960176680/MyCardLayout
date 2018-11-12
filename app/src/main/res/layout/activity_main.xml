@@ -8,12 +8,12 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <com.example.zhouwenguang.mycardlayout.impl.CardGroupLayout
+        <com.example.zhouwenguang.mycardlayout.base.CardGroupLayout
             android:id="@+id/layout_cardgroup"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
             >
-        </com.example.zhouwenguang.mycardlayout.impl.CardGroupLayout>
+        </com.example.zhouwenguang.mycardlayout.base.CardGroupLayout>
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

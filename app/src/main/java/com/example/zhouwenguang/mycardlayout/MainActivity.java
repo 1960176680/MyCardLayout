@@ -3,11 +3,10 @@ package com.example.zhouwenguang.mycardlayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.zhouwenguang.mycardlayout.base.BaseCardView;
-import com.example.zhouwenguang.mycardlayout.impl.AttendanceCardView;
-import com.example.zhouwenguang.mycardlayout.impl.CardGroupLayout;
-import com.example.zhouwenguang.mycardlayout.impl.NoticeCardView;
-import com.example.zhouwenguang.mycardlayout.impl.ToDoCardView;
+import com.example.zhouwenguang.mycardlayout.impl.AttendanceCard;
+import com.example.zhouwenguang.mycardlayout.base.CardGroupLayout;
+import com.example.zhouwenguang.mycardlayout.impl.NoticeCard;
+import com.example.zhouwenguang.mycardlayout.impl.ToDoCard;
 
 public class MainActivity extends AppCompatActivity {
     CardGroupLayout cardGroupLayout;
@@ -20,12 +19,12 @@ public class MainActivity extends AppCompatActivity {
     }
     private void initView() {
         cardGroupLayout=findViewById(R.id.layout_cardgroup);
-        cardGroupLayout.addChildView(MainActivity.this,new NoticeCardView(),R.layout.item_card1);
-        cardGroupLayout.addChildView(MainActivity.this,new AttendanceCardView(),R.layout.item_card1);
-        cardGroupLayout.addChildView(MainActivity.this,new ToDoCardView(),R.layout.item_card1);
-        cardGroupLayout.addChildView(MainActivity.this,new ToDoCardView(),R.layout.item_card1);
-        cardGroupLayout.addChildView(MainActivity.this,new ToDoCardView(),R.layout.item_card1);
-        cardGroupLayout.addChildView(MainActivity.this,new ToDoCardView(),R.layout.item_card1);
+        cardGroupLayout.addChildView(MainActivity.this,new NoticeCard());
+        cardGroupLayout.addChildView(MainActivity.this,new AttendanceCard());
+        cardGroupLayout.addChildView(MainActivity.this,new ToDoCard());
+        cardGroupLayout.addChildView(MainActivity.this,new ToDoCard());
+        cardGroupLayout.addChildView(MainActivity.this,new ToDoCard());
+        cardGroupLayout.addChildView(MainActivity.this,new ToDoCard());
     }
     private void initData() {
 
