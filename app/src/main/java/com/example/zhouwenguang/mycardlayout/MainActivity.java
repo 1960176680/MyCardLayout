@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
         cardGroupLayout.addChildView(MainActivity.this,new NoticeCard());
         cardGroupLayout.addChildView(MainActivity.this,new AttendanceCard());
         cardGroupLayout.addChildView(MainActivity.this,new ToDoCard());
+        cardGroupLayout.addChildView(MainActivity.this,new AttendanceCard());
         cardGroupLayout.addChildView(MainActivity.this,new ToDoCard());
-        cardGroupLayout.addChildView(MainActivity.this,new ToDoCard());
-        cardGroupLayout.addChildView(MainActivity.this,new ToDoCard());
+        cardGroupLayout.addChildView(MainActivity.this,new NoticeCard());
     }
     private void initData() {
 
