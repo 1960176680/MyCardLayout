@@ -11,13 +11,12 @@ import android.widget.LinearLayout;
  */
 public class CardGroupLayout extends LinearLayout {
     public CardGroupLayout(Context context) {
-        super(context,null);
+        super(context);
+        setOrientation(LinearLayout.VERTICAL);
+        setGravity(Gravity.CENTER);
     }
     public CardGroupLayout(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs,0);
-    }
-    public CardGroupLayout(Context context, @Nullable AttributeSet attrs,int defStyleAttr) {
-        super(context, attrs,defStyleAttr);
+        super(context, attrs);
         setOrientation(LinearLayout.VERTICAL);
         setGravity(Gravity.CENTER);
     }
@@ -28,7 +27,7 @@ public class CardGroupLayout extends LinearLayout {
      */
     public void addChildView(Context context, BaseCard cardView){
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        lp.setMargins(20, 80, 20, 0);
+        lp.setMargins(20, 50, 20, 30);
         lp.height=350;
         lp.width=1000;
         lp.gravity=Gravity.CENTER;
