@@ -5,19 +5,19 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.LinearLayout;
-
+/**
+ * author：zhouwenguang
+ * date：2018/11/12 19:06
+ */
 public class CardGroupLayout extends LinearLayout {
-    private Context mContext;
     public CardGroupLayout(Context context) {
-        super(context);
-        mContext=context;
-        setOrientation(LinearLayout.VERTICAL);
-        setGravity(Gravity.CENTER);
+        super(context,null);
     }
-
     public CardGroupLayout(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-        mContext=context;
+        super(context, attrs,0);
+    }
+    public CardGroupLayout(Context context, @Nullable AttributeSet attrs,int defStyleAttr) {
+        super(context, attrs,defStyleAttr);
         setOrientation(LinearLayout.VERTICAL);
         setGravity(Gravity.CENTER);
     }
@@ -28,12 +28,11 @@ public class CardGroupLayout extends LinearLayout {
      */
     public void addChildView(Context context, BaseCard cardView){
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-        lp.setMargins(20, 20, 20, 0);
-        lp.height=500;
-        lp.width=800;
-        lp.topMargin=80;
+        lp.setMargins(20, 80, 20, 0);
+        lp.height=350;
+        lp.width=1000;
         lp.gravity=Gravity.CENTER;
-        this.addView(cardView.getView(mContext),lp);
+        addView(cardView.getView(context),lp);
         cardView.loadData(context);
     }
 }

@@ -3,14 +3,16 @@ package com.example.zhouwenguang.mycardlayout.impl;
 import android.content.Context;
 import android.view.View;
 import android.widget.Toast;
-
 import com.example.zhouwenguang.mycardlayout.R;
 import com.example.zhouwenguang.mycardlayout.base.BaseCard;
+/**
+ * author：zhouwenguang
+ * date：2018/11/12 19:06
+ */
 public class ToDoCard extends BaseCard {
     @Override
     public View getView(Context context) {
-        View view=setContentView(context,R.layout.item_card1);
-        return view;
+        return setContentView(context,R.layout.item_card2);
     }
 
     @Override
